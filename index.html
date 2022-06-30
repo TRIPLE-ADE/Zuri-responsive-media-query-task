@@ -178,7 +178,7 @@
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
                     <small id="lastName-error">Last Name cannot be empty</small> <br>
                 </div>
-                <div class="form_control">
+                <div class="form_contro l">
                     <input type="email" name="email" id="email" placeholder="Email Address" required> 
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
                      <small id="email-error">Looks like this is not an email</small><br>
@@ -196,31 +196,58 @@
     </main>
 
     <script>
-       const form=document.getElementById("main-form")
-        const firstName=document.getElementById("first-name")
-        const lastName=document.getElementById("last-name")
-        const email=document.getElementById("email")
-        const password=document.getElementById("password")
-        const button=document.getElementById("button")
-        const firstNameError=document.getElementById("firstName-error")
-        const lastNameError=document.getElementById("lastName-error")
-        const emailError=document.getElementById("email-error")
-        const passwordError=document.getElementById("password-error") 
-        const error=document.querySelector('svg')
+        const form = document.getElementById("main-form");
+      const firstName = document.getElementById("first-name");
+      const lastName = document.getElementById("last-name");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const submitButton = document.getElementById("button");
+      const firstNameError = document.getElementById("firstName-error");
+      const lastNameError = document.getElementById("lastName-error");
+      const emailError = document.getElementById("email-error");
+      const passwordError = document.getElementById("password-error");
+      const error = document.querySelector("svg");
 
-        button.addEventListener("Click", ()=>{
-           
-        if(firstName === ''){
-            firstNameError.style.display= "block"
-            error.style.display ="block"
-            firstName.style.border = '#e74c3c'
-            firstName.style.outline = "none"
-            
-        } else{
-           firstName.style.border ="";
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+      });
+
+      submitButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (firstName.value === "") {
+          firstNameError.style.display = "inline";
+          error.style.display = "inline";
+          firstName.style.borderColor ='#e74c3c';
+          firstName.style
+         
+        } else {
+          firstName.style.border = "";
         }
+        if (lastName.value === "") {
+          lastNameError.style.display = "inline";
+          error.style.display = "inline";
+          lastName.style.borderColor ='#e74c3c';
+    
+        } else {
+          lastName.style.border = "";
         }
-        )
+        if (email.value === "") {
+          emailError.style.display = "inline";
+          error.style.display = "inline";
+          email.style.borderColor ='#e74c3c';
+    
+        } else {
+          email.style.border = "";
+        }
+        if (password.value === "") {
+          passwordError.style.display = "inline";
+          error.style.display = "inline";
+          password.style.borderColor ='#e74c3c';
+          
+        } else {
+          password.style.borderColor = "green";
+        }
+      });
     </script>
 
 </body>
