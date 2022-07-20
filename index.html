@@ -18,14 +18,19 @@
         body {
             background-color: hsl(0, 100%, 74%);
             background-image:url(./intro-desktop.png);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         main{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin: auto;
-            padding-top: 50px;
-            width: 100%;
+            width: 90%;
         }
         .container{
             width:450px;
@@ -66,7 +71,7 @@
             background-color: #ffffff;
             padding: 20px;
             text-align: center;
-            height: 400px;
+            height: auto;
            
         }
         input{
@@ -81,6 +86,7 @@
             outline-color:#000 ;
             color: black;
         }
+       
         .form_control{
             position: relative;
         }
@@ -88,9 +94,9 @@
             display: none;
             top:65px;
             bottom: 0;
-            left:   275px;
+            left:  22em;
             position: absolute;
-            font-size: 8px;
+            font-size: 10px;
             color: #e74c3c;
         }
         svg{
@@ -110,7 +116,7 @@
         }
         #button:hover{
             box-shadow: 0px 5.5px 3px rgba(0, 0, 0, 0.3);
-            transition: 2s;
+            /* transition: 2s; */
             cursor: pointer;
         }
         #condition{
@@ -134,7 +140,7 @@
                 margin-bottom: 50px;
             }
         }
-        @media (max-width:375px) {
+        @media (max-width:415px) {
             body{
              background-image: url(./intro-mobile.png);   
             }
@@ -145,6 +151,16 @@
             padding: 5px;
             width: 240px;
            }
+           .form_control small{
+            top:50px;
+            bottom: 0;
+            left:  10em;
+            font-size: 10px;
+        }
+           svg{
+            top: 20px;
+            right: 20px;
+            }
            #button{
             padding: 5px;
             width: 260px;
@@ -171,22 +187,22 @@
                 <form action="" name="sign_up_form" method="post" autocomplete="off" id="main-form">
                 <div class="form_control">
                     <input type="text" name="firstname" id="first-name" placeholder="First Name" required >
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                    <svg class="error-first" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
                     <small id="firstName-error" >First Name cannot be empty</small> <br>
                 </div>
                 <div class="form_control ">
                     <input type="text" name="lastname" id="last-name" placeholder="Last Name" required>
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                    <svg class="error-last" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
                     <small id="lastName-error">Last Name cannot be empty</small> <br>
                 </div>
-                <div class="form_contro l">
+                <div class="form_control">
                     <input type="email" name="email" id="email" placeholder="Email Address" required> 
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                    <svg class="error-email" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
                      <small id="email-error">Looks like this is not an email</small><br>
                 </div>
                <div class="form_control">
                 <input type="password" name="password" id="password" placeholder="Password" required>
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                <svg class="error-password" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
                 <small id="password-error">Password cannot be empty</small> <br>
                </div>
                 <input type="submit" value="CLAIM YOUR FREE TRAIL"  id="button"> <br>
@@ -207,7 +223,10 @@
       const lastNameError = document.getElementById("lastName-error");
       const emailError = document.getElementById("email-error");
       const passwordError = document.getElementById("password-error");
-      const error = document.querySelector("svg");
+      const firstError = document.querySelector(".error-first");
+      const lastError = document.querySelector(".error-last");
+      const mailError = document.querySelector(".error-email");
+      const passError = document.querySelector(".error-password");
 
       form.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -217,36 +236,44 @@
         event.preventDefault();
         if (firstName.value === "") {
           firstNameError.style.display = "inline";
-          error.style.display = "inline";
+          firstError.style.display = "inline";
           firstName.style.borderColor ='#e74c3c';
-          firstName.style
          
         } else {
-          firstName.style.border = "";
+          firstNameError.style.display = "none";
+          firstError.style.display = "none" ;
+          firstName.style.borderColor ='green';
+
         }
         if (lastName.value === "") {
           lastNameError.style.display = "inline";
-          error.style.display = "inline";
+          lastError.style.display = "inline";
           lastName.style.borderColor ='#e74c3c';
     
         } else {
-          lastName.style.border = "";
+          lastNameError.style.display = "none";
+          lastError.style.display = "none";
+          lastName.style.borderColor ='green';
         }
         if (email.value === "") {
           emailError.style.display = "inline";
-          error.style.display = "inline";
+          mailError.style.display = "inline";
           email.style.borderColor ='#e74c3c';
     
         } else {
-          email.style.border = "";
+          emailError.style.display = "none";
+          mailError.style.display = "none";
+          email.style.borderColor ='green';;
         }
         if (password.value === "") {
           passwordError.style.display = "inline";
-          error.style.display = "inline";
+          passError.style.display = "inline";
           password.style.borderColor ='#e74c3c';
           
         } else {
-          password.style.borderColor = "green";
+          passwordError.style.display = "none";
+          passError.style.display = "none";
+          password.style.borderColor ='green';
         }
       });
     </script>
