@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');    
-        *{
-          font-family: 'Poppins', sans-serif;
-          Font-size: 16px;
-          color: #ffffff;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            Font-size: 16px;
+            color: #ffffff;
         }
+
         body {
             background-color: hsl(0, 100%, 74%);
-            background-image:url(./intro-desktop.png);
+            background-image: url(./intro-desktop.png);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -25,33 +28,36 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-        main{
+
+        main {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin: auto;
             width: 90%;
         }
-        .container{
-            width:450px;
-        }
-        #text{
-           
-            padding-top: 100px;
-            font-weight:400;
 
+        .container {
+            width: 450px;
         }
-        h1{
-            font-size:40px;
+
+        #text {
+            padding-top: 100px;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 40px;
             line-height: 50px;
-            font-weight:700;
+            font-weight: 700;
         }
-    
+
         #form {
             text-align: center;
-            
+
         }
-        #form #head{
+
+        #form #head {
             font-size: 14px;
             padding: 12px;
             background-color: hsl(248, 32%, 49%);
@@ -59,125 +65,147 @@
             text-align: center;
             margin-bottom: 30px;
             box-shadow: 0px 5.5px 3px rgba(0, 0, 0, 0.3);
-        
+
         }
-        p span{
-            font-size: 14px; 
-           font-weight: 100; 
+
+        p span {
+            font-size: 14px;
+            font-weight: 100;
         }
-        form{
+
+        form {
             box-shadow: 0px 5.5px 3px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             background-color: #ffffff;
             padding: 20px;
             text-align: center;
             height: auto;
-           
+
         }
-        input{
+
+        input {
             font-size: 14px;
-            font-weight:500;
+            font-weight: 500;
             width: 350px;
             margin-top: 15px;
             margin-bottom: 15px;
-            padding:12px;
+            padding: 12px;
             border-radius: 5px;
-            border: 1.5px solid hsl(246, 25%, 77%) ;
-            outline-color:#000 ;
+            border: 1.5px solid hsl(246, 25%, 77%);
+            outline-color: #000;
             color: black;
         }
-       
-        .form_control{
+
+        .form_control {
             position: relative;
         }
-        .form_control small{
+
+        .form_control small {
             display: none;
-            top:65px;
+            top: 65px;
             bottom: 0;
-            left:  22em;
+            left: 22em;
             position: absolute;
             font-size: 10px;
             color: #e74c3c;
         }
-        svg{
+
+        svg {
             display: none;
             size: 5px;
             position: absolute;
             top: 30px;
             right: 30px;
         }
-        #button{
+
+        #button {
             margin-bottom: 0;
             background-color: hsl(154, 59%, 51%);
-            outline:none;
+            outline: none;
             border: none;
             width: 375px;
             color: #ffffff;
         }
-        #button:hover{
+
+        #button:hover {
             box-shadow: 0px 5.5px 3px rgba(0, 0, 0, 0.3);
-            /* transition: 2s; */
             cursor: pointer;
         }
-        #condition{
-            
+
+        #condition {
             font-size: 8px;
-            color:hsl(246, 25%, 77%);
+            color: hsl(246, 25%, 77%);
         }
-        #condition a{
+
+        #condition a {
             font-size: 8px;
-            color: hsl(0, 100%, 74%) ;
+            color: hsl(0, 100%, 74%);
         }
-        @media (max-width:930px) {
-            main{
+
+
+        @media (max-width:1032px) {
+            main {
                 padding-top: 0px;
             }
-            #text{
+
+            #text {
                 padding-top: 10px;
                 text-align: center;
             }
-            form{
+
+            form {
                 margin-bottom: 50px;
             }
         }
+
+
         @media (max-width:415px) {
-            body{
-             background-image: url(./intro-mobile.png);   
+
+            body {
+                background-image: url(./intro-mobile.png);
             }
-           .container{
-            width:300px;
-           }
-           input{
-            padding: 5px;
-            width: 240px;
-           }
-           .form_control small{
-            top:50px;
-            bottom: 0;
-            left:  10em;
-            font-size: 10px;
-        }
-           svg{
-            top: 20px;
-            right: 20px;
+
+            .container {
+                width: 300px;
             }
-           #button{
-            padding: 5px;
-            width: 260px;
-           }
-           #form{
-            margin-left: 0px;
-           }
+
+            input {
+                padding: 5px;
+                width: 240px;
+            }
+
+            .form_control small {
+                top: 50px;
+                bottom: 0;
+                left: 10em;
+                font-size: 10px;
+            }
+
+            svg {
+                top: 20px;
+                right: 20px;
+            }
+
+            #button {
+                padding: 5px;
+                width: 260px;
+            }
+
+            #form {
+                margin-left: 0px;
+            }
         }
     </style>
 </head>
+
 <body>
     <a href="https://github.com/TRIPLE-ADE/Zuri-responsive-media-query-task">Github repo</a>
     <main>
-        <div class="container">  
+        <div class="container">
             <div id="text">
                 <h1>Learn to code by watching others</h1>
-                <p>See how experienced developers solve problems in real-time. Watching scripted tutorial is great, but understanding how developers think is invaluable </p>
+                <p>See how experienced developers solve problems in real-time. Watching scripted tutorial is great, but
+                    understanding how developers think is invaluable </p>
             </div>
         </div>
         <div class="container">
@@ -185,28 +213,54 @@
                 <p id="head">Try it free 7 days<span> then $20/mo. thereafter</span> </p>
                 <p class="success register-success"></p>
                 <form action="" name="sign_up_form" method="post" autocomplete="off" id="main-form">
-                <div class="form_control">
-                    <input type="text" name="firstname" id="first-name" placeholder="First Name" required >
-                    <svg class="error-first" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
-                    <small id="firstName-error" >First Name cannot be empty</small> <br>
-                </div>
-                <div class="form_control ">
-                    <input type="text" name="lastname" id="last-name" placeholder="Last Name" required>
-                    <svg class="error-last" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
-                    <small id="lastName-error">Last Name cannot be empty</small> <br>
-                </div>
-                <div class="form_control">
-                    <input type="email" name="email" id="email" placeholder="Email Address" required> 
-                    <svg class="error-email" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
-                     <small id="email-error">Looks like this is not an email</small><br>
-                </div>
-               <div class="form_control">
-                <input type="password" name="password" id="password" placeholder="Password" required>
-                <svg class="error-password" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
-                <small id="password-error">Password cannot be empty</small> <br>
-               </div>
-                <input type="submit" value="CLAIM YOUR FREE TRAIL"  id="button"> <br>
-                <span style="text-align: center;" id="condition">By clicking the button, you are agreeing to our<a href="/sign_in.html" style="text-decoration:none;" id="terms_service">Terms and Services</a></span>  
+                    <div class="form_control">
+                        <input type="text" name="firstname" id="first-name" placeholder="First Name" required>
+                        <svg class="error-first" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                            </g>
+                        </svg>
+                        <small id="firstName-error">First Name cannot be empty</small> <br>
+                    </div>
+                    <div class="form_control ">
+                        <input type="text" name="lastname" id="last-name" placeholder="Last Name" required>
+                        <svg class="error-last" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                            </g>
+                        </svg>
+                        <small id="lastName-error">Last Name cannot be empty</small> <br>
+                    </div>
+                    <div class="form_control">
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        <svg class="error-email" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                            </g>
+                        </svg>
+                        <small id="email-error">Looks like this is not an email</small><br>
+                    </div>
+                    <div class="form_control">
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <svg class="error-password" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                            </g>
+                        </svg>
+                        <small id="password-error">Password cannot be empty</small> <br>
+                    </div>
+                    <input type="submit" value="CLAIM YOUR FREE TRAIL" id="button"> <br>
+                    <span style="text-align: center;" id="condition">By clicking the button, you are agreeing to our<a
+                            href="/sign_in.html" style="text-decoration:none;" id="terms_service">Terms and
+                            Services</a></span>
                 </form>
             </div>
         </div>
@@ -214,69 +268,86 @@
 
     <script>
         const form = document.getElementById("main-form");
-      const firstName = document.getElementById("first-name");
-      const lastName = document.getElementById("last-name");
-      const email = document.getElementById("email");
-      const password = document.getElementById("password");
-      const submitButton = document.getElementById("button");
-      const firstNameError = document.getElementById("firstName-error");
-      const lastNameError = document.getElementById("lastName-error");
-      const emailError = document.getElementById("email-error");
-      const passwordError = document.getElementById("password-error");
-      const firstError = document.querySelector(".error-first");
-      const lastError = document.querySelector(".error-last");
-      const mailError = document.querySelector(".error-email");
-      const passError = document.querySelector(".error-password");
+        const firstName = document.getElementById("first-name");
+        const lastName = document.getElementById("last-name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const submitButton = document.getElementById("button");
+        const firstNameError = document.getElementById("firstName-error");
+        const lastNameError = document.getElementById("lastName-error");
+        const emailError = document.getElementById("email-error");
+        const passwordError = document.getElementById("password-error");
+        const firstError = document.querySelector(".error-first");
+        const lastError = document.querySelector(".error-last");
+        const mailError = document.querySelector(".error-email");
+        const passError = document.querySelector(".error-password");
 
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-      });
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+        });
 
-      submitButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        if (firstName.value === "") {
-          firstNameError.style.display = "inline";
-          firstError.style.display = "inline";
-          firstName.style.borderColor ='#e74c3c';
-         
-        } else {
-          firstNameError.style.display = "none";
-          firstError.style.display = "none" ;
-          firstName.style.borderColor ='green';
+        submitButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (firstName.value === "") {
+                firstNameError.style.display = "inline";
+                firstError.style.display = "inline";
+                firstName.style.borderColor = '#e74c3c';
 
-        }
-        if (lastName.value === "") {
-          lastNameError.style.display = "inline";
-          lastError.style.display = "inline";
-          lastName.style.borderColor ='#e74c3c';
-    
-        } else {
-          lastNameError.style.display = "none";
-          lastError.style.display = "none";
-          lastName.style.borderColor ='green';
-        }
-        if (email.value === "") {
-          emailError.style.display = "inline";
-          mailError.style.display = "inline";
-          email.style.borderColor ='#e74c3c';
-    
-        } else {
-          emailError.style.display = "none";
-          mailError.style.display = "none";
-          email.style.borderColor ='green';;
-        }
-        if (password.value === "") {
-          passwordError.style.display = "inline";
-          passError.style.display = "inline";
-          password.style.borderColor ='#e74c3c';
-          
-        } else {
-          passwordError.style.display = "none";
-          passError.style.display = "none";
-          password.style.borderColor ='green';
-        }
-      });
+            } else {
+                firstName.style.borderColor = 'green';
+
+            }
+            setTimeout(() => {
+                firstNameError.style.display = "none";
+                firstError.style.display = "none";
+                firstName.style.borderColor = 'hsl(246, 25%, 77%)';
+            }, 2000);
+            
+            if (lastName.value === "") {
+                lastNameError.style.display = "inline";
+                lastError.style.display = "inline";
+                lastName.style.borderColor = '#e74c3c';
+
+            } else {
+                lastName.style.borderColor = 'green';
+            }
+            setTimeout(() => {
+                lastNameError.style.display = "none";
+                lastError.style.display = "none";
+                lastName.style.borderColor = 'hsl(246, 25%, 77%)';
+            }, 2000);
+            
+            if (email.value === "") {
+                emailError.style.display = "inline";
+                mailError.style.display = "inline";
+                email.style.borderColor = '#e74c3c';
+
+            } 
+            else {
+                email.style.borderColor = 'green';;
+            }
+            setTimeout(() => {
+                emailError.style.display = "none";
+                mailError.style.display = "none";
+                email.style.borderColor = 'hsl(246, 25%, 77%)';
+            }, 2000);
+            
+            if (password.value === "") {
+                passwordError.style.display = "inline";
+                passError.style.display = "inline";
+                password.style.borderColor = '#e74c3c';
+            } else {
+                password.style.borderColor = 'green';
+            }
+            setTimeout(() => {
+                passwordError.style.display = "none";
+                passError.style.display = "none";
+                password.style.borderColor = 'hsl(246, 25%, 77%)';
+            }, 2000);
+            
+        });
     </script>
 
 </body>
+
 </html>
